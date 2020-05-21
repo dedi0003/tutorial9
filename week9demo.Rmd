@@ -1,0 +1,111 @@
+---
+title: "Report for federal government"
+author: MayunkB
+output:
+  pdf_document:
+    citation_package: natbib
+    highlight: tango
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
+    keep_tex: true
+  html_document:
+    df_print: paged
+    toc: yes
+    toc_depth: '2'
+bibliography: references.bib 
+biblio-style: plainnat
+subtitle: "Machine learning consultancy"
+header-includes:
+- \usepackage{titling}
+- \pretitle{\begin{center} 
+  \includegraphics[width=5in,height=6in]{Images/sam-albury-oA7MMRxTVzo-unsplash.jpg}\LARGE\\}
+- \posttitle{\end{center}}
+- \usepackage{fontawesome}
+- \usepackage[most]{tcolorbox}
+- \usepackage{xcolor}
+- \usepackage{sectsty}
+- \sectionfont{\color{blue}}
+- \usepackage{verbatim}
+- \usepackage{fancyhdr}
+- \pagestyle{fancy}
+---
+
+
+```{r , echo = FALSE, message = FALSE, warning = FALSE}
+
+library(knitr)
+library(kableExtra)
+```
+
+
+
+\clearpage
+
+# Section 1
+
+
+
+
+
+This is a new version report
+
+
+Table example using R:
+
+```{r tableexample, echo = FALSE}
+dt <- mtcars[1:5, 1:6]
+
+kable(dt, caption = "Table example") %>%
+  kable_styling(bootstrap_options = "striped", full_width = F)
+```
+
+
+
+
+\clearpage
+
+# Section 2
+
+
+Table example using latex: 
+
+\begin{table}
+\begin{center}
+  \begin{tabular}{ l | c | r }
+    \hline
+    1 & 2 & 3 \\ \hline
+    4 & 5 & 6 \\ \hline
+    7 & 8 & 9 \\
+    \hline
+  \end{tabular}
+  \caption{This is my table using latex} \label{tab:sometab}
+\end{center}
+\end{table}
+
+
+Example from \href{Wiki}{https://en.wikibooks.org/wiki/LaTeX/Tables}
+
+
+\clearpage
+
+# Section 3
+
+blah blah balh
+
+
+\clearpage
+
+# Section 4
+
+
+
+
+\clearpage
+
+# Citation examples
+
+[More styles for natbib here](https://www.overleaf.com/learn/latex/Natbib_bibliography_styles)
+
+
+ @BC64 and this is another article about COVID @bai2020presumed and I can also cite R packages as follows @ggplot2
